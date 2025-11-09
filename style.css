@@ -1,0 +1,36 @@
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f0f4f8, #e0e7ff); color:#333; line-height:1.6; transition: 0.3s; }
+body.dark-mode { background: linear-gradient(135deg, #1a1a1a, #2d2d2d); color:#e0e0e0; }
+
+header { background: linear-gradient(90deg, #0055aa, #003366); color:#fff; padding:30px 20px; text-align:center; position:relative; }
+.theme-toggle { position:absolute; top:20px; right:20px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; }
+
+nav { display:flex; justify-content:center; background-color:#0070d4; }
+nav a { padding:15px 25px; color:white; font-weight:bold; display:flex; align-items:center; gap:8px; }
+nav a:hover { background-color:#0055aa; border-radius:4px; }
+
+main { max-width:1400px; margin:30px auto; padding:0 20px; }
+
+section { background:#fff; padding:30px; border-radius:15px; margin-bottom:30px; }
+body.dark-mode section { background:#2a2a2a; color:#e0e0e0; }
+
+form { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
+form input, form select, form button { width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; }
+body.dark-mode form input, body.dark-mode form select { background:#3a3a3a; color:#e0e0e0; border-color:#555; }
+
+form button { background: linear-gradient(90deg, #0070d4, #0055aa); color:#fff; cursor:pointer; grid-column:span 2; max-width:200px; }
+form button:hover { background: linear-gradient(90deg, #0055aa, #003366); }
+
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+th, td { padding:12px; text-align:left; }
+th { background: linear-gradient(90deg, #0070d4, #0055aa); color:#fff; }
+tr:nth-child(even) { background-color:#f9f9f9; }
+body.dark-mode tr:nth-child(even) { background-color:#3a3a3a; }
+
+.notification { position:fixed; top:20px; right:20px; padding:15px 20px; border-radius:8px; color:#fff; font-weight:bold; z-index:1000; opacity:0; transition: opacity 0.3s;}
+.notification.show { opacity:1;}
+.success { background:#5cb85c; }
+.error { background:#d9534f; }
+
+#searchResult { margin-top:20px; padding:20px; background:#f0f4f8; border-radius:8px; display:none;}
+body.dark-mode #searchResult { background:#3a3a3a;}
